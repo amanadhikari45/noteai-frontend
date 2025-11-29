@@ -8,6 +8,7 @@ export default function Sidebar() {
       <nav className="space-y-3">
         <Link to="/dashboard" className="block hover:text-primary">Upload PDf</Link>
         <Link to="/dashboard/dashboardsummarize" className="block hover:text-primary">DashboardSummarize</Link>
+        <Link to="/dashboard/logout" className="block hover:text-primary">Logout</Link>
 
       </nav>
     </div>
