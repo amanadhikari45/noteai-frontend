@@ -33,7 +33,7 @@ export default function SignUpPage() {
     }
 
     return (
-        <div className="dark min-h-screen bg-background flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="dark min-h-screen bg-background flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gray-900">
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-40" />
                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-40" />
@@ -46,13 +46,13 @@ export default function SignUpPage() {
                 <div className="text-center mb-10 sm:mb-12">
                     <div className="inline-block mb-4">
                         <div className="h-12 w-12 rounded-xl bg-linear-to-r from-primary to-accent flex items-center justify-center">
-                            <Lock className="h-6 w-6 text-primary-foreground" />
+                            <Lock className="h-6 w-6 text-white" />
                         </div>
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-3 tracking-tight">
+                    <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3 tracking-tight">
                         Create Account
                     </h1>
-                    <p className="text-muted-foreground text-sm sm:text-base">
+                    <p className="text-gray-900 text-sm sm:text-base">
                         Sign up to get started
                     </p>
                 </div>
@@ -60,15 +60,15 @@ export default function SignUpPage() {
                 {/* Form */}
                 <form
                     onSubmit={handleSubmit}
-                    className="space-y-6 bg-card/50 backdrop-blur-xl border border-border/50 rounded-2xl p-8 sm:p-10"
+                    className="space-y-6 bg-card/50 backdrop-blur-xl border  border-white rounded-2xl p-8 sm:p-10"
                 >
                     {/* Email */}
                     <div className="space-y-3">
-                        <label htmlFor="email" className="block text-sm font-semibold text-foreground">
+                        <label htmlFor="email" className="block text-sm font-semibold text-white">
                             Email Address
                         </label>
                         <div className="relative group">
-                            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white group-focus-within:text-primary transition-colors" />
                             <input
                                 id="email"
                                 type="email"
@@ -76,18 +76,18 @@ export default function SignUpPage() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
-                                className="w-full pl-12 pr-4 py-3 bg-input/50 border border-border/50 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-300 hover:border-border"
+                                className="w-full pl-12 pr-4 py-3 bg-input/50 border border-border/50 rounded-lg text-white placeholder:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-300 hover:border-border"
                             />
                         </div>
                     </div>
 
                     {/* Password */}
                     <div className="space-y-3">
-                        <label htmlFor="password" className="block text-sm font-semibold text-foreground">
+                        <label htmlFor="password" className="block text-sm font-semibold text-white">
                             Password
                         </label>
                         <div className="relative group">
-                            <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                            <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white group-focus-within:text-primary transition-colors" />
                             <input
                                 id="password"
                                 type={showPassword ? "text" : "password"}
@@ -95,12 +95,12 @@ export default function SignUpPage() {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
-                                className="w-full pl-12 pr-12 py-3 bg-input/50 border border-border/50 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-300 hover:border-border"
+                                className="w-full pl-12 pr-12 py-3 bg-input/50 border border-border/50 rounded-lg text-white placeholder:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-300 hover:border-border"
                             />
                             <button
                                 type="button"
                                 onClick={() => setShowPassword(!showPassword)}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-white transition-colors"
                             >
                                 {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                             </button>
@@ -109,11 +109,11 @@ export default function SignUpPage() {
 
                     {/* Confirm Password */}
                     <div className="space-y-3">
-                        <label htmlFor="confirmPassword" className="block text-sm font-semibold text-foreground">
+                        <label htmlFor="confirmPassword" className="block text-sm font-semibold text-white">
                             Confirm Password
                         </label>
                         <div className="relative group">
-                            <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
+                            <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white group-focus-within:text-primary transition-colors" />
                             <input
                                 id="confirmPassword"
                                 type={showConfirmPassword ? "text" : "password"}
@@ -121,12 +121,12 @@ export default function SignUpPage() {
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
                                 required
-                                className="w-full pl-12 pr-12 py-3 bg-input/50 border border-border/50 rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-300 hover:border-border"
+                                className="w-full pl-12 pr-12 py-3 bg-input/50 border border-border/50 rounded-lg text-white placeholder:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all duration-300 hover:border-border"
                             />
                             <button
                                 type="button"
                                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-white transition-colors"
                             >
                                 {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                             </button>
@@ -137,7 +137,7 @@ export default function SignUpPage() {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full mt-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 disabled:opacity-50 disabled:cursor-not-allowed text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 group"
+                        className="w-full mt-8 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 group"
                     >
                         {loading ? (
                             <>
@@ -153,12 +153,11 @@ export default function SignUpPage() {
                     </button>
                 </form>
 
-                {/* Already have account */}
                 <div className="mt-10 text-center text-sm">
-                    <span className="text-muted-foreground">Already have an account? </span>
+                    <span className="text-white">Already have an account? </span>
                     <Link
                         to="/"
-                        className="text-primary hover:text-accent font-semibold transition-colors duration-300"
+                        className="text-white hover:text-accent font-semibold transition-colors duration-300"
                     >
                         Sign In
                     </Link>
