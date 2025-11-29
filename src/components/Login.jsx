@@ -26,7 +26,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="dark min-h-screen bg-background flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="dark min-h-screen bg-gray-900 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-40" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-40" />
@@ -37,14 +37,14 @@ export default function LoginPage() {
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12">
           <div className="inline-block mb-4">
-            <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <Lock className="h-6 w-6 text-primary-foreground" />
+            <div className="h-12 w-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center">
+              <Lock className="h-6 w-6 text-white " />
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-3 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3 tracking-tight">
             Welcome Back
           </h1>
-          <p className="text-muted-foreground text-sm sm:text-base">
+          <p className="text-white text-sm sm:text-base">
             Sign in to your account to continue
           </p>
         </div>
@@ -56,11 +56,11 @@ export default function LoginPage() {
         >
           {/* Email */}
           <div className="space-y-3">
-            <label htmlFor="email" className="block text-sm font-semibold text-foreground">
+            <label htmlFor="email" className="block text-sm font-semibold text-white">
               Email Address
             </label>
             <div className="relative group">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
+              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white group-focus-within:text-primary transition-colors" />
               <input
                 id="email"
                 type="email"
@@ -68,18 +68,18 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full pl-12 pr-4 py-3 bg-input/50 border border-border/50 rounded-lg text-foreground"
+                className="w-full pl-12 pr-4 py-3 bg-input/50 border border-border/50 rounded-lg text-white"
               />
             </div>
           </div>
 
           {/* Password */}
           <div className="space-y-3">
-            <label htmlFor="password" className="block text-sm font-semibold text-foreground">
+            <label htmlFor="password" className="block text-sm font-semibold text-white">
               Password
             </label>
             <div className="relative group">
-              <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
+              <Lock className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white group-focus-within:text-primary transition-colors" />
               <input
                 id="password"
                 type={showPassword ? "text" : "password"}
@@ -87,12 +87,12 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full pl-12 pr-12 py-3 bg-input/50 border border-border/50 rounded-lg text-foreground"
+                className="w-full pl-12 pr-12 py-3 bg-input/50 border border-border/50 rounded-lg text-white"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                className="absolute right-4 top-1/2 -translate-y-1/2  text-white text-whitehover:text-white"
               >
                 {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
               </button>
@@ -103,7 +103,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full mt-8 bg-linear-to-r from-primary to-accent text-primary-foreground font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2"
+            className="w-full mt-8 bg-linear-to-r from-primary to-accent text-white  font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2"
           >
             {loading ? (
               <>
@@ -121,11 +121,11 @@ export default function LoginPage() {
 
         {/* Navigation */}
         <div className="mt-10 text-center text-sm">
-          <span className="text-muted-foreground">Don't have an account? </span>
+          <span className="text-white">Don't have an account? </span>
 
           <Link
             to="/signup"
-            className="text-primary hover:text-accent font-semibold transition-colors duration-300"
+            className="text-white hover:text-accent font-semibold transition-colors duration-300"
           >
             Sign up
           </Link>
