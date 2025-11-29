@@ -7,19 +7,20 @@ import LoginPage from './components/Login'
 import SignUpPage from './components/Signup'
 import DashboardLayout from './Layout/DashboardLayout'
 import DashboardHome from './pages/Dashboard/DashboardHome'
+import DashboardSummarize from './pages/Dashboard/DashbordSummarize'
 function App() {
 
   return (
     <>
       <BrowserRouter>
       <Routes>
-        {/* Auth Pages */}
+
         <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
-        
-        {/* Dashboard Routes */}
+ 
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<DashboardHome />} />
+           <Route path="dashboardsummarize" element={<DashboardSummarize />} />
         </Route>
       </Routes>
     </BrowserRouter>
