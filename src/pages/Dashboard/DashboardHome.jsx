@@ -29,13 +29,13 @@ const DashboardHome = () => {
 
   return (
     <div className="p-6 flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold mb-6">AI Notes Summarizer</h1>
+      <h1 className="text-3xl font-bold mb-6 text-gray-800">AI Notes Summarizer</h1>
 
       {/* Upload Box */}
       <div className="w-full max-w-lg bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 flex flex-col items-center justify-center">
-        <UploadCloud className="h-12 w-12 text-primary mb-4" />
-        <h2 className="text-xl font-semibold mb-2">Upload your PDF</h2>
-        <p className="text-sm text-gray-500 mb-4 text-center">
+        <UploadCloud className="h-12 w-12 text-primary mb-4 text-white" />
+        <h2 className="text-xl font-semibold mb-2 text-white">Upload your PDF</h2>
+        <p className="text-sm text-white mb-4 text-center">
           Select a PDF file containing your notes. AI will summarize it for you.
         </p>
 
